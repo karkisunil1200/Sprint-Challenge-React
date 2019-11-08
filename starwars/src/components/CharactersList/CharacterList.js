@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import {list} from '../../data';
 import Characters from '../Characters/Characters';
+import {Container, Figures} from './CharacterStyled';
 
 const Characterlist = () => {
   const [characters, setCharacters] = useState([]);
@@ -23,15 +24,15 @@ const Characterlist = () => {
   //   }, []);
 
   return (
-    <div>
-      <h2>Hello from CharacterList</h2>
+    <Container>
       {/* {characters.map((character, index) => {
         return <Characters key={index} char={character} />;
       })} */}
+
       {charList.map((char, index) => {
         return <Characters result={char.results} key={index} />;
       })}
-    </div>
+    </Container>
   );
 };
 
